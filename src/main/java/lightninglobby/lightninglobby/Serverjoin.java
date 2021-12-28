@@ -16,6 +16,7 @@ public class Serverjoin implements Listener {
             player.setInvisible(false);
             player.setGameMode(GameMode.ADVENTURE);
             player.performCommand("friends gui");
+            player.performCommand("cp Games");
         }
     }
 }
