@@ -12,5 +12,6 @@ public class Lobbynodamage implements Listener {
         if (e.getEntity() instanceof Player && e.getEntity().getWorld().getName().equals("Minigames_Lobby")){
             e.setCancelled(true);
         }
+        return;
     }
 }
