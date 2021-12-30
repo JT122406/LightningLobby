@@ -1,5 +1,6 @@
 package lightninglobby.lightninglobby;
 
+import org.bukkit.Color;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -20,12 +21,15 @@ public class Serverjoin implements Listener {
         inv.clear();
         if (player.getLocation().getWorld().getName().equals("Minigames_Lobby")) {
             ItemStack compass = new ItemStack(Material.COMPASS, 1);
+            ItemMeta commeta = compass.getItemMeta();
+            commeta.setDisplayName("Games");
+            compass.setItemMeta(commeta);
             player.setCanPickupItems(false);
             player.setHealth(20);
             player.setInvisible(false);
             player.setGameMode(GameMode.ADVENTURE);
             inv.setItem(4, compass);
-            //player.performCommand("cp Games");
+
         }
     }
 }

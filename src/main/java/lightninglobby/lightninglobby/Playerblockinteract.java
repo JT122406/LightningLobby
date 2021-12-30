@@ -17,7 +17,7 @@ public class Playerblockinteract implements Listener {
         Player player = (Player) event.getPlayer();
         if (player.getWorld().getName().equals("Minigames_Lobby")){
             Material clicked = player.getInventory().getItemInMainHand().getType();
-            if ((event.getAction()  == Action.RIGHT_CLICK_BLOCK) && (clicked == Material.COMPASS)){
+            if (((event.getAction()  == Action.RIGHT_CLICK_AIR) || (Action.RIGHT_CLICK_BLOCK == event.getAction())) && (clicked == Material.COMPASS)){
                 Bukkit.getServer().dispatchCommand(player, "cp Games");
             }
             event.setCancelled(true);
