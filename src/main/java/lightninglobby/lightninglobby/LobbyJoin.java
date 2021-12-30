@@ -26,7 +26,11 @@ public class LobbyJoin implements Listener {
             player.setHealth(20);
             player.setInvisible(false);
             player.setGameMode(GameMode.ADVENTURE);
+
+            ItemMeta meta = compass.getItemMeta();
+            meta.setLocalizedName("Games");
             inv.setItem(4, compass);
+
             //player.performCommand("cp Games");
         }
 
