@@ -17,10 +17,11 @@ public class LobbyJoin implements Listener {
 
     public void PlayerChangedWorldEvent(PlayerChangedWorldEvent event){
         Player player = event.getPlayer();
+        PlayerInventory inv = player.getInventory();
+        inv.clear();
 
         if (player.getLocation().getWorld().getName().equals("Minigames_Lobby")){
-            PlayerInventory inv = player.getInventory();
-            inv.clear();
+
             ItemStack compass = new ItemStack(Material.COMPASS, 1);
             ItemMeta commeta = compass.getItemMeta();
             commeta.setDisplayName("Games");
@@ -34,7 +35,7 @@ public class LobbyJoin implements Listener {
 
             inv.setItem(4, compass);
 
-            //player.performCommand("cp Games");
+
         }
 
     }
