@@ -14,14 +14,11 @@ import org.bukkit.inventory.*;
 
 public class LobbyJoin implements Listener {
     @EventHandler
-
     public void PlayerChangedWorldEvent(PlayerChangedWorldEvent event){
         Player player = event.getPlayer();
         PlayerInventory inv = player.getInventory();
         inv.clear();
-
         if (player.getLocation().getWorld().getName().equals("Minigames_Lobby")){
-
             ItemStack compass = new ItemStack(Material.COMPASS, 1);
             ItemMeta commeta = compass.getItemMeta();
             commeta.setDisplayName("Games");
@@ -30,13 +27,7 @@ public class LobbyJoin implements Listener {
             player.setHealth(20);
             player.setInvisible(false);
             player.setGameMode(GameMode.ADVENTURE);
-
-
-
             inv.setItem(4, compass);
-
-
         }
-
     }
 }

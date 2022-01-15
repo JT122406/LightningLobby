@@ -29,7 +29,6 @@ public class Serverjoin implements Listener {
             player.setInvisible(false);
             player.setGameMode(GameMode.ADVENTURE);
             inv.setItem(4, compass);
-
         }
     }
 }
