@@ -20,6 +20,9 @@ public final class LightningLobby extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new Playerblockinteract(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new cpgames(), this);
         getCommand("gmc").setExecutor(new gmc());
+        getCommand("gmsp").setExecutor(new gmsp());
+        getCommand("gms").setExecutor(new gms());
+        getCommand("gma").setExecutor(new gma());
         //Need to clear players inventory on world change
     }
 
