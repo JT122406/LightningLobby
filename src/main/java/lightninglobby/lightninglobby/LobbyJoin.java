@@ -21,6 +21,7 @@ public class LobbyJoin implements Listener {
         if (player.getLocation().getWorld().getName().equals("Minigames_Lobby")){
             ItemStack compass = new ItemStack(Material.COMPASS, 1);
             ItemMeta commeta = compass.getItemMeta();
+            //commeta.displayName = "Games";
             commeta.setDisplayName("Games");
             compass.setItemMeta(commeta);
             player.setCanPickupItems(false);
