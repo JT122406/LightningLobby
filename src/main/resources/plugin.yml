@@ -1,7 +1,12 @@
 name: LightningLobby
 version: '${project.version}'
 main: lightninglobby.lightninglobby.LightningLobby
-api-version: 1.16
+api-version: 1.17
 authors: [ JTMcQuigg ]
 description: Moves skript to actual plugin for minigames lobby
 website: http://web.lightning-mc.xyz/
+commands:
+  gmc:
+    description: set gamemode to creative
+    usage: /<command>
+    aliases: [gmcreative, gamemode 2]
