@@ -1,17 +1,18 @@
 package lightninglobby.lightninglobby;
 
-import org.bukkit.Color;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.format.TextColor;
+import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.jetbrains.annotations.NotNull;
 
 public class Serverjoin implements Listener {
     @EventHandler
@@ -22,7 +23,7 @@ public class Serverjoin implements Listener {
         if (player.getLocation().getWorld().getName().equals("Minigames_Lobby")) {
             ItemStack compass = new ItemStack(Material.COMPASS, 1);
             ItemMeta commeta = compass.getItemMeta();
-            commeta.setDisplayName("Games");
+            commeta.displayName(Component.text("Games").color(NamedTextColor.DARK_BLUE));
             compass.setItemMeta(commeta);
             player.setCanPickupItems(false);
             player.setHealth(20);

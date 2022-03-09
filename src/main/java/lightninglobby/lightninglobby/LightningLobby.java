@@ -23,7 +23,6 @@ public final class LightningLobby extends JavaPlugin {
         getCommand("gmsp").setExecutor(new gmsp());
         getCommand("gms").setExecutor(new gms());
         getCommand("gma").setExecutor(new gma());
-        //Need to clear players inventory on world change
     }
 
     @Override
