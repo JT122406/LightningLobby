@@ -78,5 +78,26 @@
                 <version>5.4</version>
                 <scope>provided</scope>
             </dependency>
+        <dependency>
+            <groupId>de.simonsator</groupId>
+            <artifactId>PAF-Shade</artifactId>
+            <version>1.0.228-E</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libaries/PAFInstallOnBungeeCordAndLobbyServers.jar</systemPath>
+            <exclusions>
+                <exclusion>
+                    <groupId>de.simonsator</groupId>
+                    <artifactId>Party-and-Friends-GUI</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>de.simonsator</groupId>
+                    <artifactId>Party-and-Friends-For-Velocity</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>de.simonsator</groupId>
+                    <artifactId>Party-and-Friends-For-Bungeecord-MySQL</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 </project>

@@ -1,5 +1,6 @@
 package lightninglobby.lightninglobby;
 
+import de.simonsator.partyandfriendsgui.listener.ItemsManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.GameMode;
@@ -11,10 +12,11 @@ import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class LobbyJoin implements Listener {
     @EventHandler
-    public void PlayerChangedWorldEvent(PlayerChangedWorldEvent event){
+    public void PlayerChangedWorldEvent(PlayerChangedWorldEvent event, JavaPlugin plugin){
         Player player = event.getPlayer();
         PlayerInventory inv = player.getInventory();
         inv.clear();
@@ -28,6 +30,9 @@ public class LobbyJoin implements Listener {
             player.setInvisible(false);
             player.setGameMode(GameMode.ADVENTURE);
             inv.setItem(4, compass);
+            ItemsManager itemsManager = new de.simonsator.partyandfriendsgui.listener.ItemsManager(plugin);
+            final ItemStack head = itemsManager.getHead(player);
+            itemsManager.setItems(player, head);
         }
     }
 }
