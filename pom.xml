@@ -128,7 +128,7 @@
             <artifactId>PAF-Shade</artifactId>
             <version>1.0.228-E</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libaries/PAFInstallOnBungeeCordAndLobbyServers.jar</systemPath>
+            <systemPath>${project.basedir}/libs/PAFInstallOnBungeeCordAndLobbyServers.jar</systemPath>
             <exclusions>
                 <exclusion>
                     <groupId>de.simonsator</groupId>
