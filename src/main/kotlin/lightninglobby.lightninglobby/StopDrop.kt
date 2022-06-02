@@ -6,7 +6,7 @@ import org.bukkit.event.player.PlayerDropItemEvent
 
 class StopDrop : Listener {
     @EventHandler
-    fun BlockDropItemEvent(event: PlayerDropItemEvent) {
+    fun blockDropItemEvent(event: PlayerDropItemEvent) {
         if (event.player.location.world.name == "Minigames_Lobby") event.isCancelled = true
     }
 }

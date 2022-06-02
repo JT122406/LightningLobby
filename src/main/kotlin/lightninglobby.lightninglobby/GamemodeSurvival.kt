@@ -8,11 +8,11 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.command.ConsoleCommandSender
 
-class gms : CommandExecutor {
+class GamemodeSurvival : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         if (sender is Player && sender.hasPermission("gamemode.change")) {
             if (command.name.equals("gms", ignoreCase = true)) {
-                if (args.size == 0) {
+                if (args.isEmpty()) {
                     sender.gameMode = GameMode.SURVIVAL
                     sender.sendMessage("Gamemode changed to Survival")
                     return true

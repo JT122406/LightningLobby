@@ -8,19 +8,19 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.command.ConsoleCommandSender
 
-class gmsp : CommandExecutor {
+class GamemodeCreative : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         if (sender is Player && sender.hasPermission("gamemode.change")) {
             if (command.name.equals("gms", ignoreCase = true)) {
-                if (args.size == 0) {
-                    sender.gameMode = GameMode.SPECTATOR
-                    sender.sendMessage("Gamemode changed to Spectator")
+                if (args.isEmpty()) {
+                    sender.gameMode = GameMode.CREATIVE
+                    sender.sendMessage("Gamemode changed to Creative")
                     return true
                 } else {
                     for (p1 in Bukkit.getOnlinePlayers()) if (p1.name.equals(args[0], ignoreCase = true)) {
-                        p1.gameMode = GameMode.SPECTATOR
-                        p1.sendMessage("Gamemode changed to Spectator")
-                        sender.sendMessage("Updated " + args[0] + "'s gamemode to Spectator")
+                        p1.gameMode = GameMode.CREATIVE
+                        p1.sendMessage("Gamemode changed to Creative")
+                        sender.sendMessage("Updated " + args[0] + "'s gamemode to Creative")
                         return true
                     }
                     sender.sendMessage("Player doesn't exist")
@@ -29,9 +29,9 @@ class gmsp : CommandExecutor {
         } else if (args.size == 1 && sender is ConsoleCommandSender) {
             for (p1 in Bukkit.getOnlinePlayers()) {
                 if (p1.name.equals(args[0], ignoreCase = true)) {
-                    p1.gameMode = GameMode.SPECTATOR
-                    p1.sendMessage("Gamemode changed to Spectator")
-                    sender.sendMessage("Updated " + args[0] + "'s gamemode to Spectator")
+                    p1.gameMode = GameMode.CREATIVE
+                    p1.sendMessage("Gamemode changed to Creative")
+                    sender.sendMessage("Updated " + args[0] + "'s gamemode to Creative")
                     return true
                 }
             }

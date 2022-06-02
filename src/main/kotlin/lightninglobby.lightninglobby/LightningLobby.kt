@@ -13,10 +13,10 @@ class LightningLobby : JavaPlugin() {
         Bukkit.getServer().pluginManager.registerEvents(StopDrop(), this)
         Bukkit.getServer().pluginManager.registerEvents(Playerblockinteract(), this)
         Bukkit.getServer().pluginManager.registerEvents(cpgames(), this)
-        getCommand("gmc")!!.setExecutor(gmc())
-        getCommand("gmsp")!!.setExecutor(gmsp())
-        getCommand("gms")!!.setExecutor(gms())
-        getCommand("gma")!!.setExecutor(gma())
+        getCommand("gmc")!!.setExecutor(GamemodeCreative())
+        getCommand("gmsp")!!.setExecutor(GamemodeSpectator())
+        getCommand("gms")!!.setExecutor(GamemodeSurvival())
+        getCommand("gma")!!.setExecutor(GamemodeAdventure())
 
     }
 

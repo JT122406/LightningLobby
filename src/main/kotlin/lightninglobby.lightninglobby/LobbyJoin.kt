@@ -13,7 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class LobbyJoin : Listener {
     @EventHandler
-    fun PlayerChangedWorldEvent(event: PlayerChangedWorldEvent, plugin: JavaPlugin?) {
+    fun playerChangedWorldEvent(event: PlayerChangedWorldEvent, plugin: JavaPlugin?) {
         val player = event.player
         val inv = player.inventory
         inv.clear()

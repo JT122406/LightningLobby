@@ -92,6 +92,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>simonsators-repo</id>
+            <url>https://simonsator.de/repo/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -120,28 +124,13 @@
             </dependency>
         <dependency>
             <groupId>de.simonsator</groupId>
-            <artifactId>PAF-Shade</artifactId>
-            <version>1.0.229-E</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/PAFInstallOnBungeeCordAndLobbyServers.jar</systemPath>
-            <exclusions>
-                <exclusion>
-                    <groupId>de.simonsator</groupId>
-                    <artifactId>Party-and-Friends-GUI</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>de.simonsator</groupId>
-                    <artifactId>Party-and-Friends-For-Velocity</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>de.simonsator</groupId>
-                    <artifactId>Party-and-Friends-For-Bungeecord-MySQL</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>DevelopmentPAFSpigot</artifactId>
+            <version>1.0.67</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test</artifactId>
+            <artifactId>kotlin-test-junit</artifactId>
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>

@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack
 
 class Serverjoin : Listener {
     @EventHandler
-    fun PlayerJoinEvent(event: PlayerJoinEvent) {
+    fun playerJoinEvent(event: PlayerJoinEvent) {
         val player = event.player
         val inv = player.inventory
         inv.clear()

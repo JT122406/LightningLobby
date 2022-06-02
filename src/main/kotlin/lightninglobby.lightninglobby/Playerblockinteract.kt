@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerInteractEvent
 
 class Playerblockinteract : Listener {
     @EventHandler
-    fun blockinteractions(event: PlayerInteractEvent) {
+    fun blockInteractions(event: PlayerInteractEvent) {
         val player = event.player
         if (player.world.name == "Minigames_Lobby") {
             val clicked = player.inventory.itemInMainHand.type

@@ -11,10 +11,10 @@ class cpgames : Listener {
     @EventHandler
     fun clickgame(event: InventoryClickEvent) {
         if (event.currentItem == null)
-            return;
+            return
         val p = event.whoClicked as Player
-        if (p.location.world.name == "Minigames_Lobby" && event.currentItem!!.type == Material.COMPASS) {
+        if (p.location.world.name == "Minigames_Lobby" && event.currentItem!!.type == Material.COMPASS)
             Bukkit.getServer().dispatchCommand(p, "cp Games")
-        }
+
     }
 }
