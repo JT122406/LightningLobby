@@ -121,7 +121,7 @@
         <dependency>
             <groupId>de.simonsator</groupId>
             <artifactId>PAF-Shade</artifactId>
-            <version>1.0.228-E</version>
+            <version>1.0.229-E</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/PAFInstallOnBungeeCordAndLobbyServers.jar</systemPath>
             <exclusions>

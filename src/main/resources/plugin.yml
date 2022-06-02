@@ -5,6 +5,8 @@ api-version: 1.18
 authors: [ JTMcQuigg ]
 description: Moves skript to actual plugin for minigames lobby
 website: https://web.lightning-mc.xyz/
+softdepend:
+  - PartyAndFriendsGUI
 commands:
   gmc:
     description: set gamemode to creative
